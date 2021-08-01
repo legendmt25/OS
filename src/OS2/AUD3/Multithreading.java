@@ -11,14 +11,14 @@ public class Multithreading {
 //        Incrementor inc2 = new Incrementor();
         Thread t1 = new ThreadClass("thread 1", inc);
         Thread t2 = new ThreadClass("thread 2", inc);
-        Thread t3 = new ThreadClass("thread 3", inc);
+        //Thread t3 = new ThreadClass("thread 3", inc);
         t1.start();
         t2.start();
-        t3.start();
+        //t3.start();
 
-        t1.join();
-        t2.join();
-        t3.join();
+        t1.join(5);
+        t2.join(5);
+        //t3.join();
         System.out.println(inc);
 //        if(t1.isAlive() && t2.isAlive()) {
 //            System.out.println("Alive");
